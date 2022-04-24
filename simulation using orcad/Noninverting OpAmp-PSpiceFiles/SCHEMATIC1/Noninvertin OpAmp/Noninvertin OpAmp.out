@@ -1,0 +1,46 @@
+
+**** 04/22/22 18:54:54 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-Noninvertin OpAmp"  [ C:\USERS\EL GOHARY\ORCAD\Noninvertin OpAmp-PSpiceFiles\SCHEMATIC1\Noninvertin OpAmp.si
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Noninvertin OpAmp.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\EL GOHARY\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10m 0 1u 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source NONINVERTIN OPAMP
+R_R1         N00445 N00123  1k TC=0,0 
+R_R         load 0 N00142  10k TC=0,0 
+V_V1         N00265 0 12v
+V_V2         0 N00284 12v
+R_R2         N00123 N00142  1k TC=0,0 
+V_V3         N00445 0  AC 0
++SIN 0 100mv 1k 0 0 0
+
+**** RESUMING "Noninvertin OpAmp.cir" ****
+.END
+
+ERROR(ORPSIM-15113): Model N00142 used by R_R is undefined
+
